@@ -19,20 +19,38 @@ $('.slider-b').slick({
     asNavFor: '.my-slider',
 });
 
-$('.news__slider').slick({
+$('.news__slider').slick({})
+    
+var slider = $('.my-slider');
+$('.sl-count__total').text(slider.slick('getSlick').slideCount);
+slider.on('afterChange', function (event, slick, currentSlide) {
+    $('.sl-count__current').text(currentSlide + 1);
+})
+
+$('.my-slider2').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-b2',
+    variableWidth: true,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '60px',
+});
+    
+    
+$('.slider-b2').slick({
+    arrows: false,
+    fade: true,
+    slidesToShow: 1,
+    asNavFor: '.my-slider2',
+});
+    
+var slider = $('.my-slider2');
+$('.sl-count2__total').text(slider.slick('getSlick').slideCount);
+slider.on('afterChange', function (event, slick, currentSlide) {
+    $('.sl-count2__current').text(currentSlide + 1);
 })
     
-// $('.my-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-//     var totalPages = Math.ceil(slick.slideCount / slick.originalSettings.slidesToScroll);
-//     var currentPage = Math.ceil((currentSlide + 1) / slick.originalSettings.slidesToScroll);
-//     counter.innerText =  currentPage + '/' + totalPages;
-// });
-    
-    var slider = $('.my-slider');
-    $('.sl-count__total').text(slider.slick('getSlick').slideCount);
-    slider.on('afterChange', function (event, slick, currentSlide) {
-        $('.sl-count__current').text(currentSlide + 1);
-    })
 })
 
 
