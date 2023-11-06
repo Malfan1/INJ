@@ -1,5 +1,6 @@
 // sliders
 
+$(document).ready(function () {
     $('.my-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -20,15 +21,23 @@ $('.slider-b').slick({
 
 $('.news__slider').slick({
 })
-
-
-//     $('.my-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    
+// $('.my-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
 //     var totalPages = Math.ceil(slick.slideCount / slick.originalSettings.slidesToScroll);
 //     var currentPage = Math.ceil((currentSlide + 1) / slick.originalSettings.slidesToScroll);
 //     counter.innerText =  currentPage + '/' + totalPages;
 // });
     
-// });
+    var slider = $('.my-slider');
+    $('.sl-count__total').text(slider.slick('getSlick').slideCount);
+    slider.on('afterChange', function (event, slick, currentSlide) {
+        $('.sl-count__current').text(currentSlide + 1);
+    })
+})
+
+
+    
+
 
 //anis
 
