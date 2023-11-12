@@ -2,13 +2,50 @@
 
 $(document).ready(function () {
     $('.my-slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    //     arrows: false,
+    //     slidesToShow: 8,
+    //     dots: true,
+    //     focusOnSelect: true,
+    //     infinite: false,
+    //     slidesToScroll: 0,
+
+    //     responsive: [
+    //         {
+    //             breakpoint: 1200,
+    //             settings: {
+    //                 focusOnSelect: true,
+    //                 centerMode: true,
+    //                 centerPadding: '60px',
+    //                 asNavFor: '.slider-b',
+    //                 variableWidth: true,
+    //             }
+    //         }
+        // ]
+        
+    slidesToScroll: 6,
+    dots: true,
+    slidesToShow: 6,
+    arrows: false,
+    focusOnSelect: true,
     asNavFor: '.slider-b',
     variableWidth: true,
-    focusOnSelect: true,
-    centerMode: true,
-    centerPadding: '60px',
+    
+    
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: '60px',
+                dots: false,
+                infinite: true,
+                arrows: true,
+            }
+        }
+    ]
+    
 });
     
     
@@ -28,13 +65,29 @@ slider.on('afterChange', function (event, slick, currentSlide) {
 })
 
 $('.my-slider2').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+slidesToScroll: 8,
+    dots: true,
+    slidesToShow: 8,
+    arrows: false,
+    focusOnSelect: true,
     asNavFor: '.slider-b2',
     variableWidth: true,
-    focusOnSelect: true,
-    centerMode: true,
-    centerPadding: '60px',
+    
+    
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: '60px',
+                dots: false,
+                infinite: true,
+                arrows: true,
+            }
+        }
+    ]
 });
     
     
