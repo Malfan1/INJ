@@ -1,3 +1,11 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display+SC:wght@400;700&family=Prompt&display=swap');
+
+@font-face{
+    font-family: 'Atmospheric';
+    src: url('../../fonts/aAtmospheric.woff') format('woff');
+}
+
 /* normalize */
 
 * {
@@ -46,13 +54,7 @@ li{
     flex: 1 1 auto;
 }
 
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display+SC:wght@400;700&family=Prompt&display=swap');
-
-@font-face{
-    font-family: 'Atmospheric';
-    src: url('../../fonts/aAtmospheric.woff') format('woff');
-}
+/* root */
 
 :root{
     --bg-header: rgba(0, 0, 0, 0.75);;
