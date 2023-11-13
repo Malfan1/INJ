@@ -417,6 +417,10 @@ body.lock{
     height: 24px;
 }
 
+.nft-marketplaces__socials .close {
+    display: none;
+}
+
 .nft-marketplaces__name{
     font-size: 18px;
     margin-bottom: 20px;
@@ -854,7 +858,122 @@ body.lock{
         position: relative;
     }
 
+    .nft-marketplaces{
+        background: url('../img/border.png') center bottom/100% 100% no-repeat, 
+        url('../img/nft-marketplace-bg.jpg') center /cover no-repeat;
+        padding: 0;
+    }
+
+    .nft-marketplaces__flex{
+        padding-top: 169px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .sec-slider-189pt{
         padding-top: 189px;
+    }
+
+    .nft-marketplaces__h2 {
+        font-size: 64px;
+        margin-bottom: 50px;
+    }
+
+    .nft-marketplaces__ul{
+        display: flex;
+        gap: 17px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 57px;
+    }
+
+    .nft-marketplaces__li{
+        background: none;
+        background: url('../img/games-bg-comp.png');
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 214px;
+        height: 236px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nft-marketplaces__img_t{
+        /* padding-top: 37px; */
+    }
+
+
+    .nft-marketplaces__li_d{
+        padding: 0;
+        /* padding-top: 31px; */
+    }
+
+    .nft-marketplaces__li_n{
+        padding: 0;
+    }
+
+    .nft-marketplaces__img {
+        margin-right: 0;
+    }
+
+    .nft-marketplaces__img_d{
+        margin-right: 0;
+        width: 132px;
+        height: 111px;
+        margin-bottom: 27px;
+    }
+
+    .nft-marketplaces__img_d img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nft-marketplaces__img_n{
+        margin-right: 0;
+        width: 140px;
+        height: 90px;
+        margin-bottom: 47px;
+    }
+
+    .nft-marketplaces__img_n img {
+        width: 100%;    
+        height: 100%;
+    }
+
+    .nft-marketplaces__img_t{
+        width: 130px;
+        height: 105px;
+        margin-bottom: 33px;
+    }
+
+    .nft-marketplaces__img_t img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nft-marketplaces__name{
+        font-size: 52px;
+        margin-bottom: 16px;
+    }
+
+    .nft-marketplaces__info{
+        font-size: 20px;
+        width: 646px;
+        margin-bottom: 52px;
+    }
+
+    .nft-marketplaces__socials .close{
+        display: block;
+    }
+
+    .nft-marketplaces__socials{
+        gap: 30px;
+    }
+
+    .nft-marketplaces__socials img{
+        height: 34px;
     }
 }
