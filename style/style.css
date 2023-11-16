@@ -43,13 +43,6 @@ li{
     flex-direction: column;
 }
 
-.my-container{
-    max-width: 1236px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
 .main{
     flex: 1 1 auto;
 }
@@ -243,6 +236,14 @@ body.lock{
 }
 
 .about__circle{
+    display: none;
+}
+
+.about__cat-in{
+    display: none;
+}
+
+.about__cat-left{
     display: none;
 }
 
@@ -463,7 +464,7 @@ body.lock{
 }
 
 .news__img{
-    width: 323px;
+    width: 100%;
     height: 198px;
 }
 
@@ -576,6 +577,12 @@ body.lock{
 }
 
 @media (min-width: 1200px){
+
+      .container{
+        width: 1121px;
+        margin: 0 auto;
+    }
+
     .header-mob{
         display: none;
     }
@@ -614,24 +621,40 @@ body.lock{
     }
     
     .header__li{
-        margin-right: 46px;
+        margin-right: 27px;
     }
 
     .header__li:last-of-type{
         margin-right: 0;
     }
 
-    .container{
-        width: 1200px;
-        margin: 0 auto;
-    }
-
     .first{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/main-bg-comp.jpg') center /cover no-repeat;
         height: 936px;
-
+        position: relative;
     }
+
+    .socials{
+        position: absolute;
+        right: 71px;
+        bottom: 30px;
+        /* bottom: 0;
+        right: 0;
+        margin-right: 71px;
+        margin-bottom: 30px; */
+    }
+
+    .socials img{
+        width: 27px;
+        height: 27px;
+        margin-right: 7px;
+    }
+
+    .socials img:last-child{
+        margin-right: 0;
+    }
+
 
     .first::after{
         display: none;
@@ -655,6 +678,14 @@ body.lock{
 
     }
 
+    .first__btn{
+    }
+    
+    .first__btn:hover{
+        transform: scale(1.1);
+        transition: all .3s linear;
+    }
+
     .first__flex{
         padding-top: 541px;
         max-width: 1079px;
@@ -675,6 +706,7 @@ body.lock{
         url('../img/second-bg-comp.jpg') center /cover no-repeat;
         height: 936px;
         position: relative;
+        overflow: hidden;
     }
 
     .about__flex{
@@ -735,12 +767,98 @@ body.lock{
         top: 0;
         right: 0;
     }
-
-    .about__circle-img{
-        
+    
+    .about__circle img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about__cat-in{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .about__cat-in img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about__cat-in::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: url('../img/cat-in-ellips-1200.png') no-repeat;
+        background-size: cover;
+        filter: hue-rotate(50deg);
     }
 
-    .about__circle-img img {
+    .about__cat-in:hover::before {
+        /* opacity: .7; */
+        animation: animation 1.3s linear 2;
+    }
+
+    .about__cat-left{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 632px;
+    }
+
+    .about__cat-left::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: url('../img/cat-left-1200.png') no-repeat;
+        background-size: cover;
+        filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        -webkit-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        -moz-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+    }
+    
+    .about__cat-left:hover::before{
+        animation: animation 1.3s linear infinite;
+    }
+    
+    @keyframes animation {
+        0%{
+            opacity: .7;
+            top: 0;
+            background-position: 0 0;
+        }
+        20%{
+            top: 100px;
+            background-position: -10px -100px;
+        }
+        40%{
+            top: 240px;
+            background-position: 6px -240px;
+        }
+        60%{
+            top: 360px;
+            background-position: -6px -360px;
+        }
+        80%{
+            top: 480px;
+            background-position: 10px -480px;
+        }
+        100%{
+            top: 632px;
+            background-position: 12px -632px;
+        }
+    }
+
+    .about__cat-left img{
         width: 100%;
         height: 100%;
     }
@@ -772,30 +890,38 @@ body.lock{
     }
 
     .my-slider .slick-dots,
-    .my-slider2 .slick-dots {
+    .my-slider2 .slick-dots,
+    .news__slider .slick-dots {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .my-slider .slick-dots li,
-    .my-slider2 .slick-dots li{
+    .my-slider2 .slick-dots li,
+    .news__slider .slick-dots li{
         margin-right: 20px;
     }
 
     .my-slider .slick-dots li.slick-active button,
-    .my-slider2 .slick-dots li.slick-active button{
+    .my-slider2 .slick-dots li.slick-active button,
+    .news__slider .slick-dots li.slick-active button{
         opacity: 1;
     }
 
     .my-slider .slick-dots button,
-    .my-slider2 .slick-dots button{
+    .my-slider2 .slick-dots button,
+    .news__slider .slick-dots button{
         font-size: 0;
         width: 50px;
         height: 8px;
         background: var(--Linear, linear-gradient(90deg, #0082FA 0%, #00F2FE 169.2%));
         border: 0;
         opacity: .3;
+    }
+
+    .news__slider .slick-dots{
+        top: 376px;
     }
 
     .my-slider-item.slick-current.my-slider-item_bl{
@@ -814,6 +940,7 @@ body.lock{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/games-bg-comp.jpg') center /cover no-repeat;
         height: 936px;
+        position: relative;
     }
 
     .sec-slider__h2{
@@ -862,6 +989,7 @@ body.lock{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/nft-marketplace-bg.jpg') center /cover no-repeat;
         padding: 0;
+        position: relative;
     }
 
     .nft-marketplaces__flex{
@@ -975,5 +1103,64 @@ body.lock{
 
     .nft-marketplaces__socials img{
         height: 34px;
+    }
+
+    .news{
+        background: url('../img/border.png') center bottom/100% 100% no-repeat, 
+        url('../img/news-bg-comp.jpg') center /cover no-repeat;
+        height: 936px;
+        position: relative;
+        padding-top: 239px;
+    }
+
+    .news__h2{
+        font-size: 64px;
+        margin-bottom: 50px;
+    }
+
+    .news__slider{
+        width: 1018px;
+    }
+
+    .news__slider-item{
+        width: 326px;
+        margin-right: 14px;
+    }
+
+    .news__img{
+        width: 100%;
+        height: 183px;
+    }
+
+    .news__img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .soon{
+        background: url('../img/border.png') center bottom/100% 100% no-repeat, 
+        url('../img/news-bg-comp.jpg') center /cover no-repeat;
+        height: 936px;
+        position: relative;
+        padding: 0;
+    }
+
+    .soon__flex{
+        padding-top: 429px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .soon__info{
+        font-size: 60px;
+        line-height: 130%;
+        width: 1079px;
+    }
+}
+
+@media (min-width: 1300px){
+    .socials{
+        right: 75px;
     }
 }
