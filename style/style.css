@@ -3,7 +3,7 @@
 
 @font-face{
     font-family: 'Atmospheric';
-    src: url('../../fonts/aAtmospheric.woff') format('woff');
+    src: url('../fonts/aAtmospheric.woff') format('woff');
 }
 
 /* normalize */
