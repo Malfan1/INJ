@@ -162,6 +162,10 @@ body.lock{
     z-index: 4;
 }
 
+.socials{
+    display: none;
+}
+
 .header-mob__flex{
     display: flex;
     padding: 22.93px 15px 22px 20px;
@@ -591,6 +595,10 @@ body.lock{
         display: none;
     }
 
+    .socials{
+        display: block;
+    }
+
     .header{
         display: block;
         position: fixed;
@@ -639,16 +647,17 @@ body.lock{
         position: absolute;
         right: 71px;
         bottom: 30px;
-        /* bottom: 0;
-        right: 0;
-        margin-right: 71px;
-        margin-bottom: 30px; */
     }
 
     .socials img{
         width: 27px;
         height: 27px;
         margin-right: 7px;
+    }
+
+    .socials img:hover{
+        cursor: pointer;
+        transform: scale(1.1);
     }
 
     .socials img:last-child{
@@ -1162,5 +1171,68 @@ body.lock{
 @media (min-width: 1300px){
     .socials{
         right: 75px;
+    }
+}
+
+@media (min-width: 1400px){
+    .socials{
+        right: 88px;
+    }
+}
+
+@media (min-width: 1500px){
+    .container {
+        width: 1200px;
+    }
+
+    .socials{
+        right: 93px;
+    }
+}
+
+@media (min-width: 1600px){
+    .socials{
+        right: 91px;
+    }
+
+    .socials img{
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1700px){
+    .socials{
+        right: 100px;
+    }
+}
+
+@media (min-width: 1800px){
+    .socials{
+        right: 109px;
+    }
+}
+
+@media (min-width: 1920px){
+    .socials{
+        right: 114px;
+    }
+
+    .socials img{
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 2000px){
+    .socials{
+        right: 124px;
+    }
+}
+
+
+@media (min-width: 2100px){
+    .socials{
+        right: 129px;
     }
 }
