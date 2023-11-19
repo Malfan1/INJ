@@ -2,25 +2,6 @@
 
 $(document).ready(function () {
     $('.my-slider').slick({
-    //     arrows: false,
-    //     slidesToShow: 8,
-    //     dots: true,
-    //     focusOnSelect: true,
-    //     infinite: false,
-    //     slidesToScroll: 0,
-
-    //     responsive: [
-    //         {
-    //             breakpoint: 1200,
-    //             settings: {
-    //                 focusOnSelect: true,
-    //                 centerMode: true,
-    //                 centerPadding: '60px',
-    //                 asNavFor: '.slider-b',
-    //                 variableWidth: true,
-    //             }
-    //         }
-        // ]
         
     slidesToScroll: 6,
     dots: true,
@@ -214,7 +195,53 @@ if (menuLinks.length > 0) {
     }
 }
 
-// glitch
+// navigation
 
+const links = document.querySelectorAll("a.yakor");
 
+links.forEach((i, n) => {
+    i.addEventListener('click', function(e) {
+        e.preventDefault();
 
+        // links.forEach(a => a.classList.remove('hov'))        
+        // this.classList.add("hov");      
+
+        
+        const href = this.getAttribute('href').substring(1);
+        
+        const scrollTarget = document.getElementById(href);
+        const topOffset = 0;
+        
+        const elementPos = scrollTarget.getBoundingClientRect().top;
+        const offsetPos = elementPos - topOffset;
+        
+        console.log(elementPos);
+
+        window.scrollBy({
+            top: offsetPos,
+            behavior: 'smooth',
+        })
+    })
+})
+
+window.addEventListener("scroll", () => {
+    let scrollDist = window.scrollY;
+    console.log(scrollDist);
+
+    document.querySelectorAll('.section-scroll').forEach((el, i) => {
+        if (el.offsetTop - (document.querySelector('.header').clientHeight - 899) <= scrollDist) {
+            document.querySelectorAll('.header__nav a').forEach(el => {
+                if (el.classList.contains('hov')) {
+                    el.classList.remove('hov')
+                }
+
+                if (scrollDist <= 934) {
+                    el[0].classList.remove('hov')
+                }
+            
+            });
+
+            document.querySelectorAll('.header__nav li')[i].querySelector('a').classList.add('hov')
+        }
+    })
+})
