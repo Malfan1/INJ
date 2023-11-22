@@ -4,12 +4,16 @@ $(document).ready(function () {
     $('.my-slider').slick({
         
     slidesToScroll: 6,
-    dots: true,
     slidesToShow: 6,
+    dots: true,
     arrows: false,
     focusOnSelect: true,
     asNavFor: '.slider-b',
     variableWidth: true,
+    dots: false,
+    swipe: false,
+    // infinite: false,
+
     
     
     responsive: [
@@ -226,7 +230,6 @@ links.forEach((i, n) => {
 
 window.addEventListener("scroll", () => {
     let scrollDist = window.scrollY;
-    console.log(scrollDist);
 
     document.querySelectorAll('.section-scroll').forEach((el, i) => {
         if (el.offsetTop - (document.querySelector('.header').clientHeight - 899) <= scrollDist) {
@@ -256,3 +259,70 @@ window.addEventListener('load', () => {
         mask.remove();
     }, 600)
 })
+
+// news
+
+// class NewsCards {
+//     constructor(feature_image, title, html, slug, parentSelector) {
+//         this.feature_image = feature_image;
+//         this.title = title;
+//         this.html = html;
+//         this.slug = slug;
+//         this.parent = document.querySelector(parentSelector);
+//     }
+
+//     render() {
+//         const element = document.createElement('div');
+
+//         element.classList.add('news__slider-item');
+
+//         let text = this.html;
+//         let str = text.slice(0, 100);
+//         let a = str.split(' ');
+//         str = a.join(' ');
+
+
+//         element.innerHTML = `
+//                     <div class="news__img">
+//                     <img src=${this.feature_image} alt="" />
+//                 </div>
+//                 <div class="news__padding">
+//                     <h3 class="news__h3">${this.title}</h3>
+//                     <p class="news__p">
+//                         ${str}
+//                     </p>
+//                     <div class="news__data">${this.slug}</div>
+//                 </div>
+//         `;
+//         this.parent.append(element);
+//     }
+// }
+
+//     async function getRes(url) {
+//         let res = await fetch(url);
+    
+//         if (!res.ok) {
+//             throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+//         }
+    
+//         return await res.json();
+//     }
+
+// getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
+//     .then(data => {
+//         data.posts.forEach(({ feature_image, title, html, slug }) => {
+//             new NewsCards(feature_image, title, html, slug, '.news .container .news__flex').render();
+//         });
+//     });
+
+/// smth
+
+// const focusBlock = document.querySelectorAll(".my-slider-item");
+
+// focusBlock.forEach(i => {
+//     i.addEventListener("focus", (e) => {
+//         e.target.classList.remove('op')
+
+//     }, true);
+//     i.addEventListener("blur", (e) => e.target.classList.remove('op'), true);
+// })
