@@ -274,13 +274,9 @@ window.addEventListener('load', () => {
 //     render() {
 //         const element = document.createElement('div');
 
-//         element.classList.add('news__slider-item');
+//         element.classList.add('news__slider-item', 'slick-slide', 'slick-cloned');
 
-//         let text = this.html;
-//         let str = text.slice(0, 100);
-//         let a = str.split(' ');
-//         str = a.join(' ');
-
+//         // let p = this.html.classList.add('news__p');
 
 //         element.innerHTML = `
 //                     <div class="news__img">
@@ -288,9 +284,7 @@ window.addEventListener('load', () => {
 //                 </div>
 //                 <div class="news__padding">
 //                     <h3 class="news__h3">${this.title}</h3>
-//                     <p class="news__p">
-//                         ${str}
-//                     </p>
+//                     ${this.html}
 //                     <div class="news__data">${this.slug}</div>
 //                 </div>
 //         `;
@@ -311,18 +305,12 @@ window.addEventListener('load', () => {
 // getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
 //     .then(data => {
 //         data.posts.forEach(({ feature_image, title, html, slug }) => {
-//             new NewsCards(feature_image, title, html, slug, '.news .container .news__flex').render();
+//             console.log(html);
+//             new NewsCards(feature_image, title, html, slug, '.news .container .news__flex .news__slider .slick-list .slick-track').render();
 //         });
 //     });
 
-/// smth
 
-// const focusBlock = document.querySelectorAll(".my-slider-item");
+    // 
 
-// focusBlock.forEach(i => {
-//     i.addEventListener("focus", (e) => {
-//         e.target.classList.remove('op')
-
-//     }, true);
-//     i.addEventListener("blur", (e) => e.target.classList.remove('op'), true);
-// })
+    new WOW().init();
