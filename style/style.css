@@ -138,6 +138,12 @@ body.lock{
     overflow: hidden;
 }
 
+.no-pseudo:before,
+.no-pseudo:after, {
+   content: none !important;
+   display: none !important;
+}
+
 .mask{
     width: 100%;
     height: 100%;
@@ -276,6 +282,7 @@ body.lock{
     background: url('../img/about.jpg') center no-repeat;
     height: 812px;
     width: 100%;
+    overflow: hidden;
 }
 
 .about__circle{
@@ -438,6 +445,11 @@ body.lock{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.nft-marketplaces__animation{
+    display: flex;
+    flex-direction: column;
 }
 
 .nft-marketplaces__li_d{
@@ -669,7 +681,6 @@ body.lock{
 
     ::-webkit-scrollbar-track{
         background: #d4d4d4;
-        /* box-shadow: 0 0 2px rgba(0, 0, 0,1) inset; */
     }
 
     ::-webkit-scrollbar-thumb{
@@ -921,11 +932,11 @@ body.lock{
         background: url('../img/cat-in-ellips-1200.png') no-repeat;
         background-size: cover;
         filter: hue-rotate(50deg);
+        z-index: 4;
     }
 
     .about__cat-in:hover::before {
-        /* opacity: .7; */
-        animation: animation 1.3s linear 2;
+        animation: animation 1.3s linear 3;
     }
 
     .about__cat-left{
@@ -949,10 +960,11 @@ body.lock{
         filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
         -webkit-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
         -moz-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        z-index: 4;
     }
     
     .about__cat-left:hover::before{
-        animation: animation 1.3s linear infinite;
+        animation: animation 1.3s linear 3;
     }
     
     @keyframes animation {
@@ -1125,6 +1137,18 @@ body.lock{
         align-items: center;
     }
 
+    .nft-marketplaces__animation{
+        flex-direction: row;
+    }
+
+    .nft-marketplaces__animation li {
+        margin-right: 17px;
+    }
+
+    .nft-marketplaces__animation li:last-child {
+        margin-right: 0;
+    }
+
     .sec-slider-189pt{
         padding-top: 150px;
     }
@@ -1154,14 +1178,8 @@ body.lock{
         justify-content: center;
     }
 
-    .nft-marketplaces__img_t{
-        /* padding-top: 37px; */
-    }
-
-
     .nft-marketplaces__li_d{
         padding: 0;
-        /* padding-top: 31px; */
     }
 
     .nft-marketplaces__li_n{
@@ -1311,10 +1329,6 @@ body.lock{
 }
 
 @media (min-width: 1920px){
-    .about{
-        /* overflow:visible; */
-    }
-
     .about__circle{
         display: none;
         
@@ -1352,10 +1366,11 @@ body.lock{
         background: url('../img/cat-in-ellips-1920.png') no-repeat;
         background-size: cover;
         filter: hue-rotate(50deg);
+        z-index: 4;
     }
 
     .about__cat-in-1920px:hover::before{
-        animation: animation1 1.3s linear infinite;
+        animation: animation1 1.3s linear 3;
     }
 
     @keyframes animation1 {
@@ -1399,10 +1414,11 @@ body.lock{
         filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
         -webkit-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
         -moz-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        z-index: 4;
     }
 
     .about__cat-left-1920px:hover::before{
-        animation: animation1 1.3s linear infinite;
+        animation: animation1 1.3s linear 3;
     }
 
     .about__cat-in-1920px img {
@@ -1521,13 +1537,11 @@ body.lock{
     }
 }
 
-
 @media (min-width: 2100px){
     .socials{
         right: 129px;
     }
 }
-
 
 .my-slider2-item img{
     width: 65px;
