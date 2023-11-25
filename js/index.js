@@ -262,54 +262,74 @@ window.addEventListener('load', () => {
 
 // news
 
-// class NewsCards {
-//     constructor(feature_image, title, html, slug, parentSelector) {
-//         this.feature_image = feature_image;
-//         this.title = title;
-//         this.html = html;
-//         this.slug = slug;
-//         this.parent = document.querySelector(parentSelector);
-//     }
+class NewsCards {
+    constructor(feature_image, title, html, created_at, parentSelector) {
+        this.feature_image = feature_image;
+        this.title = title;
+        this.html = html;
+        this.created_at = created_at;
+        this.parent = document.querySelector(parentSelector);
+    }
 
-//     render() {
-//         const element = document.createElement('div');
+    formatDate(dateString) {
+        const options = { month: 'short', day: 'numeric', year: 'numeric' };
+        const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
+        return formattedDate;
+    }
 
-//         element.classList.add('news__slider-item', 'slick-slide', 'slick-cloned');
+    getTextWithoutTags() {
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = this.html;
+        
+        const paragraphTag = tempElement.querySelector('p');
 
-//         // let p = this.html.classList.add('news__p');
+        return paragraphTag ? paragraphTag.textContent : null;
+    }
 
-//         element.innerHTML = `
-//                     <div class="news__img">
-//                     <img src=${this.feature_image} alt="" />
-//                 </div>
-//                 <div class="news__padding">
-//                     <h3 class="news__h3">${this.title}</h3>
-//                     ${this.html}
-//                     <div class="news__data">${this.slug}</div>
-//                 </div>
-//         `;
-//         this.parent.append(element);
-//     }
-// }
+    render() {
+        const element = document.createElement('div');
 
-//     async function getRes(url) {
-//         let res = await fetch(url);
-    
-//         if (!res.ok) {
-//             throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-//         }
-    
-//         return await res.json();
-//     }
+        element.classList.add('news__slider-item', 'slick-slide', 'slick-cloned');
 
-// getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
-//     .then(data => {
-//         data.posts.forEach(({ feature_image, title, html, slug }) => {
-//             console.log(html);
-//             new NewsCards(feature_image, title, html, slug, '.news .container .news__flex .news__slider .slick-list .slick-track').render();
-//         });
-//     });
+        const textWithoutTags = this.getTextWithoutTags();
+        const formattedDate = this.formatDate(this.created_at);
 
+        element.innerHTML = `
+            <div class="news__img">
+                <img src=${this.feature_image} alt="" />
+            </div>
+            <div class="news__padding">
+                <h3 class="news__h3">${this.title}</h3>
+                ${textWithoutTags ? `<div class="news__p">${textWithoutTags}</div>` : ''}
+                <div class="news__data">${formattedDate}</div>
+            </div>
+        `;
 
-    // aos
+        this.parent.append(element);
+    }
+}
+
+async function getRes(url) {
+    let res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+    }
+
+    return await res.json();
+}
+
+getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
+    .then(data => {
+        const nonChinesePosts = data.posts.filter(post => {
+            const hasChineseCharacters = /[\u4E00-\u9FFF]/.test(post.title);
+            return !hasChineseCharacters;
+        });
+
+        nonChinesePosts.forEach(({ feature_image, title, html, created_at }) => {
+            new NewsCards(feature_image, title, html, created_at, '.news .container .news__flex .news__slider .slick-list .slick-track').render();
+        });
+    });
+
+// aos
     AOS.init();
