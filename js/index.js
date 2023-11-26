@@ -61,7 +61,13 @@ $('.news__slider').slick({
         }
     ]
 })
-    
+
+var slider = $('.news__slider');
+$('.sl-count3__total').text(slider.slick('getSlick').slideCount);
+slider.on('afterChange', function (event, slick, currentSlide) {
+    $('.sl-count3__current').text(currentSlide + 1);
+});
+
 var slider = $('.my-slider');
 $('.sl-count__total').text(slider.slick('getSlick').slideCount);
 slider.on('afterChange', function (event, slick, currentSlide) {
@@ -206,10 +212,6 @@ const links = document.querySelectorAll("a.yakor");
 links.forEach((i, n) => {
     i.addEventListener('click', function(e) {
         e.preventDefault();
-
-        // links.forEach(a => a.classList.remove('hov'))        
-        // this.classList.add("hov");      
-
         
         const href = this.getAttribute('href').substring(1);
         
@@ -263,7 +265,8 @@ window.addEventListener('load', () => {
 // news
 
 class NewsCards {
-    constructor(feature_image, title, html, created_at, parentSelector) {
+    constructor(url, feature_image, title, html, created_at, parentSelector) {
+        this.url = url;
         this.feature_image = feature_image;
         this.title = title;
         this.html = html;
@@ -293,6 +296,7 @@ class NewsCards {
         const formattedDate = this.formatDate(this.created_at);
 
         element.innerHTML = `
+        <a href="${this.url}" target="_blank">
             <div class="news__img">
                 <img src=${this.feature_image} alt="" />
             </div>
@@ -301,6 +305,7 @@ class NewsCards {
                 ${textWithoutTags ? `<div class="news__p">${textWithoutTags}</div>` : ''}
                 <div class="news__data">${formattedDate}</div>
             </div>
+        </a>
         `;
 
         this.parent.append(element);
@@ -317,9 +322,9 @@ async function getRes(url) {
     return await res.json();
 }
 
-// Fetch запрос и добавление данных в слайдер
 getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
     .then(data => {
+        console.log(data.posts);
         const nonChinesePosts = data.posts.filter(post => {
             const hasChineseCharacters = /[\u4E00-\u9FFF]/.test(post.title);
             return !hasChineseCharacters;
@@ -327,24 +332,20 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
 
         const slider = $('.news__slider');
 
-        // Очищаем слайдер
         slider.slick('unslick').empty();
 
-        nonChinesePosts.forEach(({ feature_image, title, html, created_at }) => {
-            const newsCard = new NewsCards(feature_image, title, html, created_at, '.news__slider');
+        nonChinesePosts.forEach(({ url, feature_image, title, html, created_at }) => {
+            const newsCard = new NewsCards(url, feature_image, title, html, created_at, '.news__slider');
             newsCard.render();
 
-            // Добавляем элемент в слайдер
             slider.append(newsCard.parent);
         });
 
-        // Инициализируем слайдер заново
         slider.slick({
             slidesToScroll: 3,
             slidesToShow: 3,
             arrows: false,
             dots: true,
-            focusOnSelect: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -353,16 +354,17 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
                         slidesToShow: 1,
                         arrows: true,
                         dots: false,
+
                     }
                 }
             ]
         });
+
+        $('.sl-count3__total').text(slider.slick('getSlick').slideCount);
+        slider.on('afterChange', function (event, slick, currentSlide) {
+        $('.sl-count3__current').text(currentSlide + 1);
+});
     });
-
-
-
-
-
-  
+        
 // aos
     AOS.init();
