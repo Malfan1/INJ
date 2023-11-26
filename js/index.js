@@ -289,8 +289,6 @@ class NewsCards {
     render() {
         const element = document.createElement('div');
 
-        element.classList.add('news__slider-item', 'slick-slide', 'slick-cloned');
-
         const textWithoutTags = this.getTextWithoutTags();
         const formattedDate = this.formatDate(this.created_at);
 
@@ -319,6 +317,7 @@ async function getRes(url) {
     return await res.json();
 }
 
+// Fetch запрос и добавление данных в слайдер
 getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
     .then(data => {
         const nonChinesePosts = data.posts.filter(post => {
@@ -326,10 +325,44 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
             return !hasChineseCharacters;
         });
 
+        const slider = $('.news__slider');
+
+        // Очищаем слайдер
+        slider.slick('unslick').empty();
+
         nonChinesePosts.forEach(({ feature_image, title, html, created_at }) => {
-            new NewsCards(feature_image, title, html, created_at, '.news .container .news__flex .news__slider .slick-list .slick-track').render();
+            const newsCard = new NewsCards(feature_image, title, html, created_at, '.news__slider');
+            newsCard.render();
+
+            // Добавляем элемент в слайдер
+            slider.append(newsCard.parent);
+        });
+
+        // Инициализируем слайдер заново
+        slider.slick({
+            slidesToScroll: 3,
+            slidesToShow: 3,
+            arrows: false,
+            dots: true,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        arrows: true,
+                        dots: false,
+                    }
+                }
+            ]
         });
     });
 
+
+
+
+
+  
 // aos
     AOS.init();
