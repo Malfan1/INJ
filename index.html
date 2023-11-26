@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INJFanZone</title>
+    <link rel="icon" type="image/svg" href="img/icon.ico" sizes="16x16">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="style/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="lock">
     <div class="mask">
       <div class="loader"></div>
     </div>
@@ -21,7 +22,7 @@
       <header class="header-mob">
         <div class="header-mob__flex">
           <div class="header-mob__logo">
-            <img src="img/logo.svg" alt="" />
+            <a href="#main" class="yakor"><img src="img/logo.svg" alt="" /></a>
           </div>
           <div class="header-mob__burger">
             <img class="js-burger" src="img/burger.svg" alt="" />
@@ -39,22 +40,22 @@
             <nav class="header__nav">
               <ul class="header__ul">
                 <li class="header__li">
-                  <a href="#about" class="yakor">About InJecitve</a>
+                  <a href="#about" class="yakor hover">About InJective</a>
                 </li>
                 <li class="header__li">
-                  <a href="#games" class="yakor">GAMEs</a>
+                  <a href="#games" class="yakor hover">GAMEs</a>
                 </li>
                 <li class="header__li">
-                  <a href="#nft" class="yakor">NFTs</a>
+                  <a href="#nft" class="yakor hover">NFTs</a>
                 </li>
                 <li class="header__li">
-                  <a href="#market" class="yakor">NFT Marketplace</a>
+                  <a href="#market" class="yakor hover">NFT Marketplace</a>
                 </li>
                 <li class="header__li">
-                  <a href="#news" class="yakor">Latest news</a>
+                  <a href="#news" class="yakor hover">Latest news</a>
                 </li>
                 <li class="header__li">
-                  <a href="#soon" class="yakor">Soon</a>
+                  <a href="#soon" class="yakor hover">Soon</a>
                 </li>
               </ul>
             </nav>
@@ -141,17 +142,25 @@
             </div>
           </div>
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt=""/>
-            <img class="socials__img2" src="img/twittre.svg" alt=""/>
-            <img class="socials__img3" src="img/ds.svg" alt=""/>
-            <img class="socials__img4" src="img/site.svg" alt="">
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
         <section id="about" class="about page-section-2 section-scroll">
           <div class="container">
             <div class="about__flex">
-              <h2 class="about__h2">About InJecitve</h2>
+              <h2 class="about__h2" data-aos="fade-right">About InJecitve</h2>
               <div class="about__adv">
                 <ul class="about__ul">
                   <li class="about__li about__ml1" data-aos="fade-left">
@@ -221,10 +230,18 @@
           </div>
 
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img2" src="img/twittre.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img3" src="img/ds.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img4" src="img/site.svg" alt="" data-aos="zoom-in"/>
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
@@ -301,7 +318,7 @@
                       target="_blank"
                         ><img src="img/twittre.svg" alt=""
                       /></a>
-                      <a href="discord.gg/8VsudbEUpz"
+                      <a href="https://discord.gg/8VsudbEUpz"
                       target="_blank"
                         ><img src="img/ds.svg" alt=""
                       /></a>
@@ -348,7 +365,7 @@
                       target="_blank"
                         ><img src="img/twittre.svg" alt=""
                       /></a>
-                      <a href="discord.gg/Jcm8xx7UFK"
+                      <a href="https://discord.gg/Jcm8xx7UFK"
                       target="_blank"
                         ><img src="img/ds.svg" alt=""
                       /></a>
@@ -391,9 +408,11 @@
                 <div class="my-slider-item">
                   <img src="img/pinj.svg" alt="" />
                 </div>
+
                 <div class="my-slider-item">
                   <img src="img/misstree.svg" alt="" />
                 </div>
+
                 <div class="my-slider-item">
                   <img src="img/predator.svg" alt="" />
                 </div>
@@ -407,10 +426,18 @@
             </div>
           </div>
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img2" src="img/twittre.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img3" src="img/ds.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img4" src="img/site.svg" alt="" data-aos="zoom-in"/>
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
@@ -434,9 +461,11 @@
                   </p>
                   <div class="slider-b__socials">
                     <a href="https://twitter.com/A5tound_INJ"
+                      target="_blank"
                       ><img src="img/twittre.svg" alt=""
                     /></a>
-                    <a href="https://discord.gg/XVMCfs87"
+                    <a href="https://discord.gg/wbPPP2bSZ7"
+                    target="_blank"
                       ><img src="img/ds.svg" alt=""
                     /></a>
                   </div>
@@ -455,9 +484,11 @@
                   </p>
                   <div class="slider-b__socials">
                     <a href="https://twitter.com/BusyRich_INJ"
+                    target="_blank"
                     ><img src="img/twittre.svg" alt=""
                   /></a>
-                  <a href="https://discord.gg/fpdvKUFM"
+                  <a href="https://discord.gg/DM84Sff2e6"
+                  target="_blank"
                     ><img src="img/ds.svg" alt=""
                   /></a>
                   </div>
@@ -473,8 +504,8 @@
                     MISSION - To help build an Injective ecosystem through innovation, utility, art and community.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/orbitsINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/T6f7M88K"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/orbitsINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/T6f7M88K" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -487,8 +518,8 @@
                     Building the future with Injective Robots                  
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Injectiverobots"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/uJN5eDcGkU"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Injectiverobots" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/uJN5eDcGkU" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -501,8 +532,8 @@
                     Divine Beings can be defined as a collection of unique digital tokens (NFTs). These NFTs go beyond traditional digital collectibles by serving as symbolic keys to a community dedicated to personal growth, well-being, and the expansion of consciousness.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/DivineBeingsInj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/divinebeings"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/DivineBeingsInj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/emVbHqu69h" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -515,8 +546,8 @@
                     INJBOYS  is an NFT project that represents the future of blockchain gaming on the Injective.  INJBOYS participants are promised an exciting gaming ecosystem that actively rewards their participation and exploration.                    
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Injboys"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/8VsudbEUpz"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Injboys" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/8VsudbEUpz" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -529,8 +560,8 @@
                     NFT's 1st 2D animated collection on Injective Trippy Kongs, spreading vibes and aiming to build a degenerate community through art                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Injectivekongs"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/JDw8VB75ka"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Injectivekongs" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Bb5XfumFcU" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -543,8 +574,8 @@
                     NFT-Gaming Project on Injective,  where there is an opportunity to earn NFT  and the game token $HUNT                     
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Predator_inj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/dtNu77BY"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Predator_inj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/dtNu77BY" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -557,8 +588,8 @@
                     Octos Xenzia is a P2E gaming NFT on the INJ blockchain.                     
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/OctosXenzia"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/r8jBVhyY3p"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/OctosXenzia" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/r8jBVhyY3p" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -571,8 +602,8 @@
                     The INJWolves  is about power and technology. Value and quality are the foundation of NFT INJWolves                    
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/INJWolves"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/injwolves"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/INJWolves" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/FdHmkJ9Z4b" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -586,8 +617,8 @@
                     Exploring new horizons in the NFT universe Unveiling Wise Bulls                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Alphabulls_"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.com/invite/MuRYdGHCJX"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Alphabulls_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/MuRYdGHCJX" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -601,8 +632,8 @@
                     "Goons bringing Chaos to $INJ, Building the best community TOGETHER"                                            
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/INJGOONS"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/NyhYBvqv"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/INJGOONS" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/NyhYBvqv" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -616,8 +647,8 @@
                     MISSION - To help build an Injective ecosystem through innovation, utility, art and community.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveQuants"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/PwxuGyt3"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveQuants" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/PwxuGyt3" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -630,8 +661,8 @@
                     Men in Black are the most exclusive society of agents on INJ that protect the Injective blockchain and provide community and utility to holders.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/MeninblackINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.com/invite/eyZZ9V7sWu"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/MeninblackINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/eyZZ9V7sWu" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -644,8 +675,8 @@
                     The Snails NFT where Art meets Snail-Speed Innovation. A collection of pixelated PFP Snails coming on Injective.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/TheSnails_inj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/NcaSJTUGnY"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/TheSnails_inj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/NcaSJTUGnY" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -658,8 +689,8 @@
                     Coozy Verse is an NFT project with a vision to become the top of the $INJ chain of DAO utilities, covering the areas of Injective, Polygon, Ethereum, Solana, and more.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/CoozyChips"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/coozyverse"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/CoozyChips" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/coozyverse" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -668,11 +699,10 @@
                     <img src="img/monki.png" alt="" />
                   </div>
                   <p class="slider-b__name">Monki</p>
-                  <p class="slider-b__info">
-                  </p>
+                  <p class="slider-b__info">The value comes from participating in Initial Offerings (ICO/IDO/IPOs) and investing in projects identified by post-mint hired researchers. </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/MonkiNFT"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/f6Xj2w6WET"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/MonkiNFT" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/f6Xj2w6WET" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -685,8 +715,8 @@
                     The Snails NFT where Art meets Snail-Speed Innovation. A collection of pixelated PFP Snails coming on Injective.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/VanguardsIn"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/vanguardsinj"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/VanguardsIn" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/vanguardsinj" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -700,8 +730,8 @@
                     In the ever-evolving world of blockchain and NFTs, all eyes are now turned towards a groundbreaking project that aims to redefine the way people perceive and engage with erotic art.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/vixxenNFT"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.com/invite/EqWARKyZBF"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/vixxenNFT" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/EqWARKyZBF" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -714,8 +744,8 @@
                     Introducing "CryptoGopniks" - the ultimate NFT project for all enthusiasts of Russian street culture! Immerse yourself in the thrilling world of gopniks and embark on an unforgettable gaming adventure
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/StarGops_nft"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.com/invite/hgSJY6xemQ"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/StarGops_nft" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/hgSJY6xemQ" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -728,8 +758,8 @@
                     Splendors is an innovative NFT project built on the injective blockchain, offering a unique blend of Art, and ownership. This Collection features a stunning Array array of digital Art pieces, each Meticulously Crafted by our Talented Artist.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Splendors_inj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/FVTFFEnnRU"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Splendors_inj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/FVTFFEnnRU" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -742,8 +772,8 @@
                     Make memes, not utility. Injective PEPUNKS more than just a derivative.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/injpepunks"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/V7cjkdDCHm"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/injpepunks" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/V7cjkdDCHm" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -756,8 +786,8 @@
                     Injective Skeleton is PFP & Utility collection of 2555 spooky skellies. Skeletons aim to be TOP project on Injective blockchain.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjHobos"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/m48c7wmZ"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjHobos" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/5BXjCqGY" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -770,8 +800,8 @@
                     Injective Skeleton is PFP & Utility collection of 2555 spooky skellies. Skeletons aim to be TOP project on Injective blockchain.                      
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/SkeletronsINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/xVbNV2uyz8"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/SkeletronsINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/xVbNV2uyz8" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -781,11 +811,11 @@
                   </div>
                   <p class="slider-b__name">DWEEDS</p>
                   <p class="slider-b__info">
-                    soon
+                    Dweeds is a collection on Injective, the percentage of secondary sales of which goes to Dweed Stakers 
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/DweedsNFT"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/W4XxpKetJw"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/DweedsNFT" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/W4XxpKetJw" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -795,11 +825,11 @@
                   </div>
                   <p class="slider-b__name">Space Academy</p>
                   <p class="slider-b__info">
-                    soon
+                    Space Academy is your gateway to the exciting universe of blockchain gaming, research, and innovation. The Space Academy community is designed to redefine the way we play and interact with cryptocurrencies on the Injective blockchain.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Academy_INJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="http://discord.gg/spaceacademy"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Academy_INJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/UPTKhCvwkJ" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -809,11 +839,11 @@
                   </div>
                   <p class="slider-b__name">Ghosts</p>
                   <p class="slider-b__info">
-                    soon
+                    The first collection of 777 3D NFTs on the blockchain Injective
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjGhosts"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/9tupMCtKqs"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjGhosts" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/9tupMCtKqs" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -826,8 +856,8 @@
                     The main utility of this project is Play 2 Earn game backed by our token. This is mean you can mint your character MISSTREE #37, use your NFT in game and receive token.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Misstree_nft"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/Jcm8xx7UFK"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Misstree_nft" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Jcm8xx7UFK" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -837,11 +867,11 @@
                   </div>
                   <p class="slider-b__name">Skitos</p>
                   <p class="slider-b__info">
-                    soon
+                    The first collection of 777 3D NFTs on the blockchain Injective
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/SkitosOnInj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/Ye4vEqYfnw"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/SkitosOnInj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Ye4vEqYfnw" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -854,8 +884,8 @@
                     First prolific NFT collection of fruitful sunflowers
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/thelightishere_"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/Ajg59M9TfH"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/thelightishere_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Ajg59M9TfH" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -868,8 +898,8 @@
                     The Takeda clan: legendary warriors, unparalleled strategists, and patrons of the profound arts.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/TakedaINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/Em7ZjYjT"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/TakedaINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Em7ZjYjT" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -882,22 +912,8 @@
                     Injective Mobs is an innovative NFT project built on the injective blockchain
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/TakedaINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/Em7ZjYjT"><img src="img/ds.svg" alt="" /></a>
-                  </div>
-                </div>
-
-                <div class="slider-b-item">
-                  <div class="slider-b__img">
-                    <img src="img/bod.png" alt="" />
-                  </div>
-                  <p class="slider-b__name">Bodhii</p>
-                  <p class="slider-b__info">
-                    soon
-                  </p>
-                  <div class="slider-b__socials">
-                    <a href="https://twitter.com/bodhii_inj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="discord.gg/wuzdQT4TTp"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/TakedaINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Em7ZjYjT" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -910,8 +926,8 @@
                     The #1 derivative project on Injective
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/BoredApeINJClub"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/V2t2T62s"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/BoredApeINJClub" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/V2t2T62s" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -924,8 +940,8 @@
                     The #1 derivative project on Injective
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/BimboNFT_"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/STZ5wMD5HB"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/BimboNFT_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/STZ5wMD5HB" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -938,7 +954,7 @@
                     The first Neochibi Collection coming to INJ
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/commiechibicol"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://twitter.com/commiechibicol" target="_blank"><img src="img/twittre.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -951,8 +967,8 @@
                     InjRillas is an upcoming Non fungible token project coming soon on the Injective Blockchain.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjRillas"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/injrillas"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjRillas" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/injrillas" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -962,11 +978,11 @@
                   </div>
                   <p class="slider-b__name">Injecptile</p>
                   <p class="slider-b__info">
-                    soon
+                    Unique NFT collection by Injectile on the Injective blockchain
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/injecptile"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/injecptile"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/injecptile" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/injecptile" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -979,8 +995,8 @@
                     555 Antialpha, the police of injective chain we are here to make this place safe and spread awareness!
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/anticybercat"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/xTZ3WKXy"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/anticybercat" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/xTZ3WKXy" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -993,8 +1009,8 @@
                     NINJV comes with a variety of traits, so in a way, you'll find yourself in a collection supply of 2,024
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/NinjectiveNFT"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/e2TNpBVBGm"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/NinjectiveNFT" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/e2TNpBVBGm" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1004,10 +1020,11 @@
                   </div>
                   <p class="slider-b__name">Whales</p>
                   <p class="slider-b__info">
-                    soon
+                    A rare and exclusive NFT collection of whales with the Quest2Earn program.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveWhales"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveWhales" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/8WHr8QcqCd" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1017,11 +1034,11 @@
                   </div>
                   <p class="slider-b__name">Creatures</p>
                   <p class="slider-b__info">
-                    soon
+                    Injective Creatures - a collection of 111 magical creatures that will soon leave their mark on Injective! Created by the talented Mystic Creatures team!
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveWhales"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/VBYAFMQMda"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveWhales" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/VBYAFMQMda" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1031,11 +1048,11 @@
                   </div>
                   <p class="slider-b__name">Apes</p>
                   <p class="slider-b__info">
-                    soon
+                    Injective Apes are a set of 3,000 unique digital collectible apes stored on the Injective blockchain. Each item in the collection is a 24x24 pixel, 8-bit-style portrait with a unique set of attributes and traits.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveApes"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/injectiveapes"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveApes" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/injectiveapes" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1048,9 +1065,9 @@
                     Building passive cash flow for our holders. Play Casino at Inj casino & Stake your NFTs
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/AliensOnIn"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://twitter.com/ToxicAliensINJ"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/aliensoninj"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/AliensOnIn" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://twitter.com/ToxicAliensINJ" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/aliensoninj" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1063,8 +1080,8 @@
                     Building passive cash flow for our holders. Play Casino at Inj casino & Stake your NFTs
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjSkeletons"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/MwbpKDb"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjSkeletons" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/MwbpKDb" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1074,11 +1091,11 @@
                   </div>
                   <p class="slider-b__name">Injective Diplos</p>
                   <p class="slider-b__info">
-                    soon
+                    Introducing Injective Diplos, a groundbreaking collection running on the Injective blockchain with exciting utilities such as a Discord-based exchange system and Coinflip.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveDiplos"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/injectivediplos"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveDiplos" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/injectivediplos" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1091,8 +1108,8 @@
                     First worthless low-quality memecoin
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/berbtoken"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/berb"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/berbtoken" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/berb" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1105,8 +1122,8 @@
                     5555 Unique doges arrived into universe ! Injective Doges NFT Collection is the first Meme Collection on Injective Blockchain
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectiveDoges"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/RaPHQxyR"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectiveDoges" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/RaPHQxyR" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1119,8 +1136,8 @@
                     InjHallas is on a mission to get those precious oils from the Injective Deserts.We'll soon uncover the riches of Injective!
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/theinjhallas"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/V8xzJkK4EF"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/theinjhallas" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/V8xzJkK4EF" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1130,11 +1147,11 @@
                   </div>
                   <p class="slider-b__name">INJSCRIBED PUNKS</p>
                   <p class="slider-b__info">
-                    soon
+                    The NFT "INJSCRIBED PUNKS" is a unique artistic creation that merges the concepts of "INJ" from Injective  and "Inscribed." This fusion embodies their distinctive artistic style, deviating from traditional pixels by utilizing letters and logos. 
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjPunk"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/2P6QdVcfFN"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjPunk" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/2P6QdVcfFN" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1147,7 +1164,7 @@
                     3000 Ninja Warriors floating around Web3, fighting for the DeFi Unification in the Name of $INJ under Creative Commons License 4.0.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/NakaNinjas_"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://twitter.com/NakaNinjas_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1160,8 +1177,8 @@
                     3000 Ninja Warriors floating around Web3, fighting for the DeFi Unification in the Name of $INJ under Creative Commons License 4.0.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/PremierNinjas"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/3Qfy7Bfp"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/PremierNinjas" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/prmr" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1171,10 +1188,11 @@
                   </div>
                   <p class="slider-b__name">Injective Punks</p>
                   <p class="slider-b__info">
-                    soon
+                    Injective Punks - A collection that represents the most advanced tools, including NFT protocols and liquidity bridges.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjPunksNf"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectivePunks" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/injectivepunks" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1187,8 +1205,8 @@
                     A clean collection of 5,000 diverse Monkeys building a virtuous community that will transcend the internet into the real world !
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjMonkeys"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/5at9sphryJ"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjMonkeys" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/5at9sphryJ" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1201,8 +1219,8 @@
                     THE FIRST AI GENERATED COLLECTION WITH REVENUE SHARING ON INJECTIVE
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/badninjas_"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/ayUfyUnP7h"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/badninjas_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/ayUfyUnP7h" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1215,8 +1233,8 @@
                     First Most Cutest 3333 Frens living on Injective
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/FrensOnInj?t=uxqklg92qeB-xRm1K58B2Q&s=09"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/jPAfkpgzre"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/FrensOnInj?t=uxqklg92qeB-xRm1K58B2Q&s=09" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/jPAfkpgzre" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1229,8 +1247,8 @@
                     Injective Pepes is a community focused project, our goal is to build the best community on Injective and bring more people into the ecosystem. Holding Pepes give you access to exclusive games, alpha channels, educational streams and more.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/InjectivePepes"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/TBnZXvP4"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/InjectivePepes" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/TBnZXvP4" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1243,8 +1261,8 @@
                     First 3D collection on INJ 
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/injectiveswords"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/7bDnjKd4"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/injectiveswords" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/4CA5bVH9f3" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1257,8 +1275,8 @@
                     This collection is a subcategory of CybersLabs. We strive to create new products and create value and utility for all projects. By having a Cyber, you get the key to enter the world of CybersLabs. 
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/CybersLabs"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/EX3tGJH7yR"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/CybersLabs" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/EX3tGJH7yR" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1268,11 +1286,11 @@
                   </div>
                   <p class="slider-b__name">Injective Ronin</p>
                   <p class="slider-b__info">
-                    soon
+                    Injective Ronin – Voted  AI-generated NFT on Injective. 
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Inj_Ronin"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/Hctt9PXz"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Inj_Ronin" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/Hctt9PXz" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1282,11 +1300,11 @@
                   </div>
                   <p class="slider-b__name">Nekos</p>
                   <p class="slider-b__info">
-                    soon
+                    Nekos is a digital art project that features unique and adorable cat characters. Each Neko is a non-fungible token (NFT) that can be collected, traded, or displayed as digital art.
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/Nekos_inj"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/3FBhJpuB"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/Nekos_inj" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/AsAEXYj5qp" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1299,8 +1317,8 @@
                     NINJA Mission: To be the first listed memecoin
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/ninjatoken_"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.com/invite/6UqJZR5Ea3"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/ninjatoken_" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.com/invite/6UqJZR5Ea3" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1313,8 +1331,8 @@
                     Apective 1111 is a NFT Project that stand in an injective ecosystem, this project has several utilities
                   </p>
                   <div class="slider-b__socials">
-                    <a href="https://twitter.com/apectiveape"><img src="img/twittre.svg" alt="" /></a>
-                    <a href="https://discord.gg/tfstNYGr"><img src="img/ds.svg" alt="" /></a>
+                    <a href="https://twitter.com/apectiveape" target="_blank"><img src="img/twittre.svg" alt="" /></a>
+                    <a href="https://discord.gg/mJkbgkyXMq" target="_blank"><img src="img/ds.svg" alt="" /></a>
                   </div>
                 </div>
 
@@ -1451,10 +1469,6 @@
                 </div>
 
                 <div class="my-slider2-item">
-                  <img src="img/bod.png" alt="" />
-                </div>
-
-                <div class="my-slider2-item">
                   <img src="img/ape.png" alt="" />
                 </div>
 
@@ -1584,10 +1598,18 @@
           </div>
 
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img2" src="img/twittre.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img3" src="img/ds.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img4" src="img/site.svg" alt="" data-aos="zoom-in"/>
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
@@ -1696,10 +1718,18 @@
           </div>
 
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img2" src="img/twittre.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img3" src="img/ds.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img4" src="img/site.svg" alt="" data-aos="zoom-in"/>
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
@@ -1715,15 +1745,20 @@
                 ></span>
               </div>
             </div>
-            
           </div>
-
-
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img2" src="img/twittre.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img3" src="img/ds.svg" alt="" data-aos="zoom-in"/>
-            <img class="socials__img4" src="img/site.svg" alt="" data-aos="zoom-in"/>
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
 
@@ -1734,10 +1769,18 @@
             </div>
           </div>
           <div class="socials">
-            <img class="socials__img1" src="img/tg.svg" alt=""/>
-            <img class="socials__img2" src="img/twittre.svg" alt=""/>
-            <img class="socials__img3" src="img/ds.svg" alt=""/>
-            <img class="socials__img4" src="img/site.svg" alt="">
+            <a href="https://t.me/joininjective" target="_blank">
+              <img class="socials__img socials__img1" src="img/tg.svg" alt=""/>
+            </a>
+            <a href="https://twitter.com/Injective_" target="_blank">
+              <img class="socials__img socials__img2" src="img/twittre.svg" alt=""/>
+            </a>
+            <a href="https://discord.com/invite/injective" target="_blank">
+              <img class="socials__img socials__img3" src="img/ds.svg" alt=""/>
+            </a>
+            <a href="https://injective.com" target="_blank">
+              <img class="socials__img socials__img4" src="img/site.svg" alt="">
+            </a>
           </div>
         </section>
       </main>

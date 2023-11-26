@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
     $('.my-slider').slick({
-        
     slidesToScroll: 6,
     slidesToShow: 6,
     dots: true,
@@ -12,9 +11,6 @@ $(document).ready(function () {
     variableWidth: true,
     dots: false,
     swipe: false,
-    // infinite: false,
-
-    
     
     responsive: [
         {
@@ -82,7 +78,6 @@ slidesToScroll: 8,
     focusOnSelect: true,
     asNavFor: '.slider-b2',
     variableWidth: true,
-    
     
     responsive: [
         {
@@ -257,6 +252,7 @@ const mask = document.querySelector('.mask');
 
 window.addEventListener('load', () => {
     mask.classList.add('hide');
+    document.body.classList.remove('lock')
     setTimeout(() => {
         mask.remove();
     }, 600)
