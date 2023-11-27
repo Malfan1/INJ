@@ -484,6 +484,17 @@ body.lock{
     margin-right: 29px;
 }
 
+.nft-marketplaces__img_injm{
+    width: 50px;
+    height: 50px;
+    margin-right: 24px;
+}
+
+.nft-marketplaces__img_injm img{
+    width: 100%;
+    height: 100%;
+}
+
 .nft-marketplaces__p{
     font-size: 22px;
 }
@@ -1106,7 +1117,7 @@ body.lock{
     }
 
     .news__slider .slick-dots{
-        top: 376px;
+        top: 389px;
     }
 
     .my-slider-item.slick-current.my-slider-item_bl{
@@ -1176,6 +1187,14 @@ body.lock{
         position: relative;
     }
 
+    .nft-marketplaces__li.is-active{
+        border-radius: 12px;
+    }
+
+    .nft-marketplaces__li:hover{
+        cursor: pointer;
+    }
+
     .nft-marketplaces__flex{
         padding-top: 169px;
         display: flex;
@@ -1242,6 +1261,17 @@ body.lock{
         width: 132px;
         height: 111px;
         margin-bottom: 27px;
+    }
+
+    .nft-marketplaces__img_injm{
+        width: 130px;
+        height: 130px;
+        margin-bottom: 9px;
+    }
+
+    .nft-marketplaces__img_injm img{
+        width: 100%;
+        height: 100%;
     }
 
     .nft-marketplaces__img_d img {
@@ -1351,9 +1381,8 @@ body.lock{
 
     .news__slider .slick-list.draggable .slick-track > div {
         margin-right: 20px;
-        min-height: 361px;
+        min-height: 360px;
     }
-
     .soon{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/news-bg-comp.jpg') center /cover no-repeat;
