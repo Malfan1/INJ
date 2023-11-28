@@ -255,6 +255,7 @@ window.addEventListener('load', () => {
     document.body.classList.remove('lock')
     setTimeout(() => {
         mask.remove();
+        AOS.init();
     }, 600)
 })
 
@@ -362,5 +363,3 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
 });
     });
         
-// aos
-    AOS.init();

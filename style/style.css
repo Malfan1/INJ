@@ -245,7 +245,7 @@ body.lock{
     text-align: center;
     font-size: 24px;
     line-height: 150%;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
 }
 
 .first__btns{
@@ -264,6 +264,7 @@ body.lock{
     background: url('../img/btn.png') no-repeat;
     background-size: 100% 100%;
     padding: 25px 0 22px;
+    font-size: 19.84px;
 }
 
 .first__btn:last-child{
@@ -361,7 +362,7 @@ body.lock{
 }
 
 .sec-slider__h2{
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .my-slider,
@@ -376,7 +377,7 @@ body.lock{
     max-width: 100%;
     width: 304px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 35px;
 }
 
 .slider-b2{
@@ -525,10 +526,6 @@ body.lock{
     height: 24px;
 }
 
-.nft-marketplaces__socials .close {
-    display: none;
-}
-
 .nft-marketplaces__name{
     font-size: 18px;
     margin-bottom: 20px;
@@ -561,7 +558,8 @@ body.lock{
     margin-bottom: 30.58px;
 }
 
-.news__slider-item{
+.news__slider-item,
+.news__slider .slick-slide{
     background: var(--black);
     border-radius: 15px;
     margin-right: 10px;
@@ -571,7 +569,7 @@ body.lock{
 }
 
 .news__padding{
-    padding: 20px 8px 17px 16px;
+    padding: 20px 8px 10px 16px;
     min-height: 143px;
 }
 
@@ -631,6 +629,10 @@ body.lock{
     height: 360px;
 }
 
+.news__slider .slick-slide {
+    width: 351px;
+}
+
 .news__slider-item.slick-slide.slick-cloned{
     width: 1000px;
 }
@@ -683,6 +685,8 @@ body.lock{
 
 .nav-mob__block{
     padding: 22.93px 15px 30px 20px;
+    height: 100vh;
+    position: relative;
 }
 
 .nav-mob__header{
@@ -702,7 +706,6 @@ body.lock{
 
 .nav-mob__ul {
     font-size: 18px;
-    margin-bottom: 361px;
 }
 
 .nav-mob__li{
@@ -716,6 +719,8 @@ body.lock{
 .nav-mob__sociasls{
     display: flex;
     gap: 30px;
+    position: absolute;
+    bottom: 30px;
 }
 
 .my-slider-item,
@@ -1311,10 +1316,6 @@ body.lock{
         font-size: 20px;
         width: 646px;
         margin-bottom: 52px;
-    }
-
-    .nft-marketplaces__socials .close{
-        display: block;
     }
 
     .nft-marketplaces__socials{
