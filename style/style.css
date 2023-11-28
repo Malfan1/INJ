@@ -734,6 +734,9 @@ body.lock{
       .container{
         width: 1121px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     ::-webkit-scrollbar{
@@ -768,6 +771,10 @@ body.lock{
         width: 100%;
         background: var(--bg-header);
         z-index: 5;
+    }
+
+    .header .header__flex{
+        width: 100%;
     }
 
     .header__logo{
@@ -806,7 +813,7 @@ body.lock{
     .first{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/main-bg-comp.jpg') center /cover no-repeat;
-        height: 936px;
+        height: 946px;
         position: relative;
     }
 
@@ -884,6 +891,7 @@ body.lock{
     .first__flex{
         padding-top: 541px;
         margin: auto;
+        position: absolute;
     } 
     
     .first__slogan{
@@ -906,6 +914,7 @@ body.lock{
         padding: 0;
         padding-top: 124px;
         margin: 0;
+        position: absolute;
     }
 
     .about__h2{
@@ -1189,6 +1198,7 @@ body.lock{
         background: url('../img/border.png') center bottom/100% 100% no-repeat, 
         url('../img/nft-marketplace-bg.jpg') center /cover no-repeat;
         padding: 0;
+        height: 936px;
         position: relative;
     }
 
@@ -1547,6 +1557,219 @@ body.lock{
     .about__cat-left-1920px img{
         width: 100%;
         height: 100%;
+    }
+
+    .nft-marketplaces__cat{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -130px;
+    }
+
+    .nft-marketplaces__cat::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: url('../img/cat-left-1550.png') no-repeat;
+        background-size: cover;
+        filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        -webkit-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        -moz-filter: brightness(84%) saturate(69%) contrast(134%) invert(11%);
+        z-index: 4;
+    }
+
+    
+    .nft-marketplaces__cat:hover::before{
+        animation: animation1 1.3s linear 3;
+    }
+
+    .nft-marketplaces__cat img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-height: 1080px){
+    .first {
+        height: 1080px;
+    }
+
+    .first__flex{
+        position: absolute;
+        bottom: 131px;
+    }
+
+    .about{
+        height: 1080px;
+    }
+
+    .about__flex{
+        position: absolute;
+        bottom: 200px;
+    }
+
+    .games{
+        height: 1080px;
+    }
+
+    .games__flex{
+        position: absolute;
+        bottom: 145px;        
+    }
+
+    .nft{
+        height: 1080px;
+    }
+
+    .nft__flex{
+        position: absolute;
+        bottom: 145px;
+    }
+
+    .nft-marketplaces{
+        height: 1080px;
+    }
+
+    .nft-marketplaces__flex{
+        position: absolute;
+        bottom: 206px;
+    }
+
+    .news{
+        height: 1080px;
+    }
+
+    .news__flex{
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .soon{
+        height: 1080px;
+    }
+}
+
+@media (min-height: 960px){
+    .first {
+        height: 960px;
+    }
+
+    .first__flex{
+        position: absolute;
+        bottom: 131px;
+    }
+
+    .about{
+        height: 960px;
+    }
+
+    .about__flex{
+        position: absolute;
+        bottom: 150px;
+    }
+
+    .games{
+        height: 960px;
+    }
+
+    .games__flex{
+        position: absolute;
+        bottom: 145px;        
+    }
+
+    .nft{
+        height: 960px;
+    }
+
+    .nft__flex{
+        position: absolute;
+        bottom: 145px;
+    }
+
+    .nft-marketplaces{
+        height: 960px;
+    }
+
+    .nft-marketplaces__flex{
+        position: absolute;
+        bottom: 166px;
+    }
+
+    .news{
+        height: 960px;
+    }
+
+    .news__flex{
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .soon{
+        height: 1080px;
+    }
+}
+
+@media (min-height: 1050px){
+    .first {
+        height: 1050px;
+    }
+
+    .first__flex{
+        position: absolute;
+        bottom: 131px;
+    }
+
+    .about{
+        height: 1050px;
+    }
+
+    .about__flex{
+        position: absolute;
+        bottom: 200px;
+    }
+
+    .games{
+        height: 1050px;
+    }
+
+    .games__flex{
+        position: absolute;
+        bottom: 145px;        
+    }
+
+    .nft{
+        height: 1050px;
+    }
+
+    .nft__flex{
+        position: absolute;
+        bottom: 145px;
+    }
+
+    .nft-marketplaces{
+        height: 1050px;
+    }
+
+    .nft-marketplaces__flex{
+        position: absolute;
+        bottom: 206px;
+    }
+
+    .news{
+        height: 1050px;
+    }
+
+    .news__flex{
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .soon{
+        height: 1080px;
     }
 }
 
