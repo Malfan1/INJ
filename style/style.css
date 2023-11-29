@@ -1593,66 +1593,6 @@ body.lock{
     }
 }
 
-@media (min-height: 1080px){
-    .first {
-        height: 1080px;
-    }
-
-    .first__flex{
-        position: absolute;
-        bottom: 131px;
-    }
-
-    .about{
-        height: 1080px;
-    }
-
-    .about__flex{
-        position: absolute;
-        bottom: 200px;
-    }
-
-    .games{
-        height: 1080px;
-    }
-
-    .games__flex{
-        position: absolute;
-        bottom: 145px;        
-    }
-
-    .nft{
-        height: 1080px;
-    }
-
-    .nft__flex{
-        position: absolute;
-        bottom: 145px;
-    }
-
-    .nft-marketplaces{
-        height: 1080px;
-    }
-
-    .nft-marketplaces__flex{
-        position: absolute;
-        bottom: 206px;
-    }
-
-    .news{
-        height: 1080px;
-    }
-
-    .news__flex{
-        position: absolute;
-        bottom: 250px;
-    }
-
-    .soon{
-        height: 1080px;
-    }
-}
-
 @media (min-height: 960px){
     .first {
         height: 960px;
@@ -1713,7 +1653,7 @@ body.lock{
     }
 }
 
-@media (min-height: 1050px){
+@media (min-height: 1050px) and (max-height: 1080px){
     .first {
         height: 1050px;
     }
@@ -1770,6 +1710,72 @@ body.lock{
 
     .soon{
         height: 1080px;
+    }
+}
+
+@media (min-height: 1080px){
+    .first {
+        height: 1080px;
+    }
+
+    .first__flex{
+        position: absolute;
+        bottom: 131px;
+    }
+
+    .about{
+        height: 1080px;
+    }
+
+    .about__flex{
+        position: absolute;
+        bottom: 200px;
+    }
+
+    .games{
+        height: 1080px;
+    }
+
+    .games__flex{
+        position: absolute;
+        bottom: 145px;        
+    }
+
+    .nft{
+        height: 1080px;
+    }
+
+    .nft__flex{
+        position: absolute;
+        bottom: 145px;
+    }
+
+    .nft-marketplaces{
+        height: 1080px;
+    }
+
+    .nft-marketplaces__flex{
+        position: absolute;
+        bottom: 206px;
+    }
+
+    .news{
+        height: 1080px;
+    }
+
+    .news__flex{
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .soon{
+        height: 1080px;
+    }
+}
+
+@media (min-height: 1100px) {
+    .first{
+        height: 100vh;
     }
 }
 
