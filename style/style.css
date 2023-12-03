@@ -217,7 +217,7 @@ body.lock{
 }
 
 .first{
-    background: url('../img/first-bg-mob.jpg') center no-repeat;
+    background: url('../img/main-bg-comp.jpg') center no-repeat;
     height: 812px;
     position: relative;
     z-index: 1;
@@ -284,7 +284,7 @@ body.lock{
 }
 
 .about{
-    background: url('../img/about.jpg') center no-repeat;
+    background: url('../img/second-bg-comp.jpg') center no-repeat;
     height: 812px;
     width: 100%;
     overflow: hidden;
@@ -348,7 +348,7 @@ body.lock{
 }
 
 .sec-slider{
-    background: url('../img/games.jpg') 35% 50% no-repeat;
+    background: url('../img/games-bg-comp.jpg') 35% 50% no-repeat;
     height: 812px;
     width: 100%;
     padding-top: 64px;
@@ -434,7 +434,7 @@ body.lock{
 }
 
 .nft-marketplaces{
-    background: url('../img/nnft-marketplaces.jpg') 50% 90% no-repeat;
+    background: url('../img/nft-marketplace-bg.jpg') 50% 90% no-repeat;
     height: 812px;
     width: 100%;
     padding-top: 47px;
@@ -539,7 +539,7 @@ body.lock{
 }
 
 .news{
-    background: url('../img/news.jpg') 50% 90% no-repeat;
+    background: url('../img/news-bg-comp.jpg') 50% 90% no-repeat;
     height: 812px;
     width: 100%;
     padding-top: 206px;
@@ -645,7 +645,7 @@ body.lock{
 }
 
 .soon{
-    background: url('../img/news.jpg') 50% 90% no-repeat;
+    background: url('../img/news-bg-comp.jpg') 50% 90% no-repeat;
     height: 812px;
     width: 100%;
     padding-top: 361px;
@@ -685,7 +685,7 @@ body.lock{
 
 .nav-mob__block{
     padding: 22.93px 15px 30px 20px;
-    height: 100vh;
+    height: 812px;
     position: relative;
 }
 
@@ -1593,7 +1593,7 @@ body.lock{
     }
 }
 
-@media (min-height: 960px){
+@media (min-height: 960px) and (min-width: 1200px){
     .first {
         height: 960px;
     }
@@ -1653,7 +1653,7 @@ body.lock{
     }
 }
 
-@media (min-height: 1050px) and (max-height: 1080px){
+@media (min-height: 1050px) and (max-height: 1080px) and (min-width: 1200px){
     .first {
         height: 1050px;
     }
@@ -1713,7 +1713,7 @@ body.lock{
     }
 }
 
-@media (min-height: 1080px){
+@media (min-height: 1080px) and (min-width: 1200px){
     .first {
         height: 1080px;
     }
@@ -1773,7 +1773,7 @@ body.lock{
     }
 }
 
-@media (min-height: 1100px) {
+@media (min-height: 1100px) and (min-width: 1200px){
     .first{
         height: 100vh;
     }
