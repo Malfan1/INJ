@@ -363,3 +363,25 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
 });
     });
         
+
+    // snow
+    function createSnowflake() {
+        const snowFlake = document.createElement('div');
+        snowFlake.classList.add('snowflake');
+        snowFlake.textContent = '❄';
+        snowFlake.style.left = Math.random() * 100 + '%';
+        const animationDuration = Math.random() * 3 + 5;
+        snowFlake.style.animationDuration = animationDuration + 's';
+        snowFlake.style.opacity = Math.random();
+        snowFlake.style.fontSize = Math.random() * 20 + 10 + 'px';
+      
+        document.getElementById('snow-container').appendChild(snowFlake);
+      
+        setTimeout(() => {
+          snowFlake.remove();
+        }, animationDuration * 1000);
+      }
+      
+      setInterval(createSnowflake, 150);
+      
+      
