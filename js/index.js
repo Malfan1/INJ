@@ -95,7 +95,6 @@ slidesToScroll: 8,
     ]
 });
     
-    
 $('.slider-b2').slick({
     arrows: false,
     fade: true,
@@ -111,6 +110,14 @@ slider.on('afterChange', function (event, slick, currentSlide) {
     
 })
 
+$('.testnets__cards').slick();
+
+var slider = $('.testnets__cards');
+$('.sl-count4__total').text(slider.slick('getSlick').slideCount);
+slider.on('afterChange', function (event, slick, currentSlide) {
+    $('.sl-count4__current').text(currentSlide + 1);
+});
+
 //anis
 
 const pict = document.querySelectorAll('.my-slider .my-slider-item');
@@ -118,7 +125,8 @@ const arrows =  document.querySelectorAll('.slick-arrow')
 
 arrows.forEach(i => {
     i.addEventListener('click', () => {
-        console.log(pict.classList.contains('slick-current'));
+        console.log();
+        pict.classList.contains('slick-current')
     })
 })
 
@@ -151,6 +159,34 @@ let tab = function () {
 }
 
 tab()
+
+let tabForTest = function () {
+    let tabNav = document.querySelectorAll('.testnets__tab'),
+        tabCont = document.querySelectorAll('.testnets__info'),
+        tabName;
+    
+    tabNav.forEach(i => {
+        i.addEventListener('click', selectTabNav);
+    })
+
+    function selectTabNav() {
+        tabNav.forEach(i => {
+            i.classList.remove('is-active');
+        });
+        this.classList.add('is-active')
+
+        tabName = this.getAttribute('data-tab-name');
+        selectTab(tabName)
+    }
+
+    function selectTab(name) {
+        tabCont.forEach(i => {
+            i.classList.contains(name) ? i.classList.add('is-active') : i.classList.remove('is-active')
+        })
+    }
+}
+
+tabForTest()
 
 // modal
 
@@ -341,7 +377,6 @@ async function getRes(url) {
 
 getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e250ab57b7922abc01')
     .then(data => {
-        console.log(data.posts);
         const nonChinesePosts = data.posts.filter(post => {
             const hasChineseCharacters = /[\u4E00-\u9FFF]/.test(post.title);
             return !hasChineseCharacters;
@@ -385,3 +420,42 @@ getRes('https://injective-blog.ghost.io/ghost/api/content/posts/?key=fe7c2d08e25
         
       
       
+// read more 
+const descrBlock = document.querySelectorAll('.testnets__readmore');
+
+descrBlock.forEach(i => {
+    i.addEventListener('click', (e) =>{
+        e.target.previousElementSibling.classList.toggle('more');
+        e.target.classList.toggle('add');
+        
+
+        if(e.target.classList.contains('add')){
+            e.target.textContent = "Read Less";
+        } else {
+            e.target.textContent = "Read More";
+        }
+    })
+})
+
+// popups
+
+const openButtons = document.querySelectorAll('.testnets__open');
+const popups = document.querySelectorAll('.testnets__popup');
+const closeButtons = document.querySelectorAll('.testnets__popup-img img');
+
+openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const popupId = button.getAttribute('data-popup-id');
+        const popupToOpen = document.querySelector(`.testnets__popup[data-popup-id="${popupId}"]`);
+        popupToOpen.classList.add('block');
+        document.body.classList.add('lock');
+    });
+});
+
+closeButtons.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+        const popup = closeButton.closest('.testnets__popup');
+        popup.classList.remove('block');
+        document.body.classList.remove('lock');
+    });
+});

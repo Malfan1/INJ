@@ -159,6 +159,16 @@ body{
     top: 375px;
 }
 
+.testnets .slick-next.slick-arrow,
+.testnets .slick-prev.slick-arrow {
+    top: 570px;
+}
+
+.sl-count4{
+    position: absolute;
+    top: 681px;
+}
+
 .sl-count3{
     position: absolute;
     bottom: -40px;
@@ -262,6 +272,19 @@ body.lock{
 
 .header-mob__logo img{
     width: 100%;
+}
+
+.nav-mob__li_new{
+    position: relative;
+}
+
+.nav-mob_new{
+    position: absolute;
+    top: -12px;
+    left: 120px;
+    font-size: 9px;
+    right: -18px;
+    color: #0082FA;
 }
 
 .first{
@@ -555,8 +578,15 @@ body.lock{
     font-size: 22px;
 }
 
-.nft-marketplaces__tab {
+.nft-marketplaces__tab{
     display: none;
+}
+
+.testnets__info {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 
 .nft-marketplaces__tab.is-active{
@@ -564,9 +594,19 @@ body.lock{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    visibility: visible;
 }
 
-.nft-marketplaces__li.is-active{
+.testnets__info.is-active{
+    visibility: visible;
+    overflow: hidden;
+    opacity: 1;
+    height: 590px;
+    transition: opacity 1s, visibility 0.5s, height 1s;
+}
+
+.nft-marketplaces__li.is-active,
+.testnets__tab.is-active{
     background: var(--Linear, linear-gradient(90deg, #0082FA 0%, #00F2FE 169.2%));
     border-radius: 4px;
 }
@@ -591,6 +631,242 @@ body.lock{
     font-family: var(--prompt);
     line-height: 150%;
     margin-bottom: 70px;
+}
+
+.testnets{
+    background: url('../img/testnets.jpg') 40% 0%/cover no-repeat;
+    height: 100vh;
+    min-height: 812px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.testnets__h2{
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.testnets__flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 47px;
+}
+
+.testnets__cards{
+    position: relative;
+    min-width: 335px;
+    max-width: 100%;
+}
+
+.testnets__card{
+    width: 100%;
+}
+
+.testnets__header{
+    display: flex;
+    border-radius: 4px;
+    padding-right: 25px;
+    padding-left: 21px;
+    height: 86px;
+    width: 100%;
+    background: var(--Linear, linear-gradient(90deg, #0082FA 0%, #00F2FE 169.2%));
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.testnets__logo{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.testnets__img {
+    width: 46px;
+    height: 46px;
+}
+
+.testnets__img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.testnets__name{
+    font-family: "Atmospheric";
+    font-size: 20px;
+    margin-left: 22px;
+}
+
+
+.testnets__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testnets__link{
+    font-family: "Prompt";
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.testnets__socials a {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 17px;
+    margin-bottom: 9px;
+}
+
+.testnets__socials a:last-child{
+    margin-bottom: 0;
+}
+
+.testnets__descr{   
+    position: relative;
+}
+
+.testnets__p{
+    font-family: "Prompt";
+    position: relative;
+    padding-inline: 12px;
+    line-height: 150%;
+    height: 95px;
+    overflow: hidden;
+    transition: height 0.4s linear, margin-bottom 0.4s linear;
+}
+
+.testnets__p::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 33.35%, #000 103.42%);
+}
+
+.testnets__readmore{
+    background: var(--Linear, linear-gradient(90deg, #0082FA 0%, #00F2FE 169.2%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Prompt;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.4s linear;
+}
+
+.testnets__open{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    background: var(--Linear, linear-gradient(90deg, #0082FA 0%, #00F2FE 169.2%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Prompt;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.testnets__p.more {
+    height: 160px;
+    overflow: visible;
+}
+
+.testnets__p.more::after {
+    content: '';
+    opacity: 0;
+}
+
+.testnets__guide{
+    position: relative;
+    padding-inline: 12px;
+    height: 260px;
+}
+
+.testnets__popup{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 91%;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+    padding: 15px;
+    padding-top: 0;
+    transition: all .3s linear;
+}
+
+.testnets__popup-img{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.testnets__popup.block{
+    opacity: 1;
+    visibility: visible;
+}
+
+.testnets__step{
+    line-height: 150%;
+    font-family: "Prompt";
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 21px;
+}
+
+.testnets__ol{
+    padding-left: 20px;
+    height: 170px;
+    overflow: hidden;
+}
+
+.testnets__popup .testnets__ol{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.testnets__popup .testnets__li{
+    margin-bottom: 15px;
+}
+
+.testnets__li{
+    font-family: "Prompt";
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    list-style: decimal;
+}
+
+.testnets__li:last-child{
+    margin-bottom: 0;
+}
+
+
+.testnets__info-how{
+    margin-left: 18px;
+}
+
+.testnets__comp{
+    display: none;
 }
 
 .news{
@@ -834,7 +1110,7 @@ body.lock{
     }
 
     .header__logo{
-        width: 202px;
+        width: 182px;
         margin-right: auto;
     }
 
@@ -859,7 +1135,20 @@ body.lock{
     }
     
     .header__li{
-        margin-right: 27px;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    .header__li_new{
+        position: relative;
+    }
+
+    .header__new{
+        position: absolute;
+        font-size: 9px;
+        top: -10px;
+        right: -18px;
+        color: #0082FA;
     }
 
     .header__li:last-of-type{
@@ -1214,9 +1503,6 @@ body.lock{
         margin-bottom: 41px;
     }
 
-    .sec-slider{
-    }
-
     .slider-b__img{
         margin-bottom: 26px;
     }
@@ -1385,6 +1671,110 @@ body.lock{
 
     .nft-marketplaces__socials img{
         height: 34px;
+    }
+
+    .testnets__mob{
+        display: none;
+    }
+
+    .testnets__comp{
+        display: block;
+    }
+
+    .testnets{
+        background: url('../img/border.png') center bottom/100% 100% no-repeat, 
+        url('../img/testnets.jpg') center /cover no-repeat;
+        height: 936px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testnets__flex-comp{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-top: 189px;
+    }
+
+    .testnets__h2{
+        font-size: 64px;
+        margin-bottom: 50px;
+    }
+
+    .testnets__wrap{
+        display: flex;
+    }
+    
+    .testnets__logo{
+        margin-right: auto;
+    }
+
+    .testnets__img{
+        width: 62px;
+        height: 62px;
+        margin-right: 22px;
+    }
+    
+    .testnets__img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .testnets__name{
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .testnets__tab{
+        width: 385px;
+        height: 100px;
+        background: url("../img/tab-bg.svg");
+        padding-block: 19px;
+        padding-left: 23px;
+        padding-right: 20px;
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+    .testnets__tabs{
+        margin-right: 30px;
+    }
+
+    .testnets__li{
+        font-size: 16px;
+    }
+
+    .testnets__link{
+        font-size: 16px;
+    }
+
+    .testnets__socials a{
+        /* display: inline-block; */
+    }
+
+    ..testnets__socials a:last-child{
+        margin-bottom: 0;
+    }
+
+    .testnets__infos{
+        max-width: 705px;
+    }
+
+    .testnets__info-about{
+        font-family: "Prompt";
+        margin-bottom: 20px;
+    }
+
+    .testnets__step{
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .testnets__tab:hover {
+        cursor: pointer;
     }
 
     .news{
@@ -1697,6 +2087,10 @@ body.lock{
     }
 
     .nft-marketplaces{
+        height: 100vh;
+    }
+
+    .testnets{
         height: 100vh;
     }
 
